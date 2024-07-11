@@ -1,11 +1,14 @@
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { Layout } from 'antd';
-import { useUserInfo, UserInfoState } from '@/store';
-import Header from './Header';
-import Left from './Sider';
+import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
+import { UserInfoState, useUserInfo } from '@/store';
+
 import Content from './Content';
+import Header from './Header';
 import styles from './index.module.less';
+import Left from './Sider';
+
 export default function CustomLayout() {
   const location = useLocation();
   const navigate = useNavigate();

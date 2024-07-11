@@ -1,7 +1,10 @@
-import { Layout, Dropdown } from 'antd';
-import { useUserInfo, UserInfoState } from '@/store';
+import { Dropdown, Layout } from 'antd';
 import { useNavigate } from 'react-router-dom';
+
+import { UserInfoState, useUserInfo } from '@/store';
+
 import styles from './index.module.less';
+
 const { Header } = Layout;
 const items = [
   {

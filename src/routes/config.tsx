@@ -1,6 +1,8 @@
-import { lazy, Suspense, ReactNode } from 'react';
-import { HomeOutlined, TableOutlined, FormOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
+import { lazy, ReactNode, Suspense } from 'react';
+
+import { FormOutlined, HomeOutlined, TableOutlined } from '@ant-design/icons';
+
 const Home = lazy(() => import('@/pages/Home/index.tsx'));
 const List = lazy(() => import('@/pages/List/index.tsx'));
 const Detail = lazy(() => import('@/pages/List/Detail/index.tsx'));

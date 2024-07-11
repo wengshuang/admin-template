@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from '@/pages/Login/index.tsx';
+
 import Layout from '@/layout';
-import { useUserInfo, UserInfoState } from '@/store';
+import Login from '@/pages/Login/index.tsx';
 import routes, { RouteType } from '@/routes/config';
-import NotFound from './404';
+import { UserInfoState, useUserInfo } from '@/store';
+
 import NoAuth from './403';
+import NotFound from './404';
 
 // 扁平化routes
 const flatRoutes = (routes: RouteType[]): RouteType[] => {

@@ -1,8 +1,11 @@
-import { useState } from 'react';
 import { Button, Form, Input } from 'antd';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useUserInfo, UserInfoState } from '@/store';
+
+import { UserInfoState, useUserInfo } from '@/store';
+
 import styles from './index.module.less';
+
 export default function Login() {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();

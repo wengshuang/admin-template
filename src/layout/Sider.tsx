@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
 import { Layout, Menu } from 'antd';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
 import routes, { RouteType } from '@/routes/config';
-import { useUserInfo, UserInfoState } from '@/store';
+import { UserInfoState, useUserInfo } from '@/store';
+
 const { Sider } = Layout;
 
 const resetRoute = (routes: RouteType[], auth: string): any => {
