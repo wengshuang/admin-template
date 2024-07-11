@@ -1,7 +1,9 @@
 import { Dropdown, Layout } from 'antd';
+import { Button, Col, Row } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 import { UserInfoState, useUserInfo } from '@/store';
+import { MenuOutlined } from '@ant-design/icons';
 
 import styles from './index.module.less';
 
@@ -31,15 +33,20 @@ export default function CustomHeader() {
   };
   return (
     <Header className={styles['header']}>
-      <div className="header-left">
-        <span className="iconfont icon-a-adminguanliyuanguanlizheyonghukehu"></span>
-        <span className="title">react-admin-template</span>
-      </div>
-      <div className="header-right">
-        <Dropdown menu={{ items, onClick }}>
-          <span className="username">欢迎，{userInfo.name}</span>
-        </Dropdown>
-      </div>
+      <Row>
+        <Col xs={2} sm={0} md={0} lg={0} xl={0} xxl={0}>
+          <Button icon={<MenuOutlined />} type="text" />
+        </Col>
+        <Col className="header-left" xs={0} sm={0} md={12} lg={12} xl={12} xxl={12}>
+          <span className="iconfont icon-a-adminguanliyuanguanlizheyonghukehu"></span>
+          <span className="title">react-admin-template</span>
+        </Col>
+        <Col className="header-right" xs={22} sm={24} md={12} lg={12} xl={12} xxl={12}>
+          <Dropdown menu={{ items, onClick }}>
+            <span className="username">欢迎，{userInfo.name}</span>
+          </Dropdown>
+        </Col>
+      </Row>
     </Header>
   );
 }

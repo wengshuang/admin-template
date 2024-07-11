@@ -31,3 +31,13 @@ li,
 ol {
   list-style: none;
 }
+
+.ant-menu-light.ant-menu-root.ant-menu-inline {
+  border-right: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .sider {
+    display: none;
+  }
+}

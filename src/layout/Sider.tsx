@@ -5,6 +5,8 @@ import { Link, useLocation } from 'react-router-dom';
 import routes, { RouteType } from '@/routes/config';
 import { UserInfoState, useUserInfo } from '@/store';
 
+import styles from './index.module.less';
+
 const { Sider } = Layout;
 
 const resetRoute = (routes: RouteType[], auth: string): any => {
@@ -48,6 +50,7 @@ export default function CustomSider() {
   }, [location]);
   return (
     <Sider
+      className="sider"
       width={240}
       theme="light"
       breakpoint="md"
@@ -58,7 +61,6 @@ export default function CustomSider() {
       }}
       onCollapse={(value) => setCollapsed(value)}
     >
-      <div className="demo-logo-vertical" />
       <Menu mode="inline" selectedKeys={selectedKeys} items={menus} theme="light" />
     </Sider>
   );
