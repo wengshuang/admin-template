@@ -1,5 +1,5 @@
 import { lazy, Suspense, ReactNode } from 'react';
-import { HomeOutlined, TableOutlined } from '@ant-design/icons';
+import { HomeOutlined, TableOutlined, FormOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
 const Home = lazy(() => import('@/pages/Home/index.tsx'));
 const List = lazy(() => import('@/pages/List/index.tsx'));
@@ -79,7 +79,7 @@ const routes: RouteType[] = [
     index: false,
     show: true,
     auth: ['admin', 'user'],
-    icon: <HomeOutlined />,
+    icon: <FormOutlined />,
     element: <LoadingPage temp={<Form />} />,
   },
 ];

@@ -15,6 +15,7 @@ const resetRoute = (routes: RouteType[], auth: string): any => {
         return {
           key: item.path,
           label: <Link to={item.path}>{item.title}</Link>,
+          icon: item.icon,
           children: resetRoute(
             children.filter((item) => item.show && item.auth?.includes(auth)),
             auth,
@@ -23,6 +24,7 @@ const resetRoute = (routes: RouteType[], auth: string): any => {
       }
       return {
         key: item.path,
+        icon: item.icon,
         label: <Link to={item.path}>{item.title}</Link>,
       };
     });
