@@ -25,7 +25,6 @@ export default function CustomRoutes() {
   const userInfo = useUserInfo((state: UserInfoState) => state.userInfo);
   const setStoreRoutes = useUserInfo((state: UserInfoState) => state.setRoutes);
   useEffect(() => {
-    console.log(userInfo, 'userInfo');
     const r = flatRoutesArr.filter((item: RouteType) =>
       item.auth?.includes(userInfo.name as string),
     );

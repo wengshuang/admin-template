@@ -4,6 +4,7 @@ import { Spin } from 'antd';
 const Home = lazy(() => import('@/pages/Home/index.tsx'));
 const List = lazy(() => import('@/pages/List/index.tsx'));
 const Detail = lazy(() => import('@/pages/List/Detail/index.tsx'));
+const Form = lazy(() => import('@/pages/Form/index.tsx'));
 export type RouteType = {
   path: string;
   title: string;
@@ -71,6 +72,15 @@ const routes: RouteType[] = [
         element: <LoadingPage temp={<Detail />} />,
       },
     ],
+  },
+  {
+    path: '/form',
+    title: '表单',
+    index: false,
+    show: true,
+    auth: ['admin', 'user'],
+    icon: <HomeOutlined />,
+    element: <LoadingPage temp={<Form />} />,
   },
 ];
 export default routes;
