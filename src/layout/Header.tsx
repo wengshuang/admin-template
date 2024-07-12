@@ -38,7 +38,7 @@ export default function CustomHeader() {
           <Button icon={<MenuOutlined />} type="text" />
         </Col>
         <Col className="header-left" xs={0} sm={0} md={12} lg={12} xl={12} xxl={12}>
-          <span className="iconfont icon-a-adminguanliyuanguanlizheyonghukehu"></span>
+          {/* <span className="iconfont icon-a-adminguanliyuanguanlizheyonghukehu"></span> */}
           <span className="title">react-admin-template</span>
         </Col>
         <Col className="header-right" xs={22} sm={24} md={12} lg={12} xl={12} xxl={12}>
