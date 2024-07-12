@@ -5,11 +5,9 @@ import { Link, useLocation } from 'react-router-dom';
 import routes, { RouteType } from '@/routes/config';
 import { UserInfoState, useUserInfo } from '@/store';
 
-import styles from './index.module.less';
-
 const { Sider } = Layout;
 
-const resetRoute = (routes: RouteType[], auth: string): any => {
+export const resetRoute = (routes: RouteType[], auth: string): any => {
   // 递归routes并返回
   return routes
     .filter((item) => item.show && item.auth?.includes(auth))

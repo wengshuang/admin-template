@@ -1,11 +1,13 @@
-import { Dropdown, Layout } from 'antd';
-import { Button, Col, Row } from 'antd';
+import { Button, Col, Dropdown, Layout, Row } from 'antd';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import routes from '@/routes/config';
 import { UserInfoState, useUserInfo } from '@/store';
 import { MenuOutlined } from '@ant-design/icons';
 
 import styles from './index.module.less';
+import { resetRoute } from './Sider';
 
 const { Header } = Layout;
 const items = [
@@ -14,12 +16,15 @@ const items = [
     label: <span>退出登录</span>,
   },
 ];
-
 export default function CustomHeader() {
+  const [menuList, setMenuList] = useState<any>([]);
   const navigate = useNavigate();
   const logout = useUserInfo((state: UserInfoState) => state.logout);
   const userInfo = useUserInfo((state: UserInfoState) => state.userInfo);
 
+  useEffect(() => {
+    setMenuList(resetRoute(routes, userInfo.name as string));
+  }, [userInfo]);
   const onClick = ({ key }: { key: number | string }) => {
     if (key === '1') {
       handleLogout();
@@ -35,7 +40,18 @@ export default function CustomHeader() {
     <Header className={styles['header']}>
       <Row>
         <Col xs={2} sm={0} md={0} lg={0} xl={0} xxl={0}>
-          <Button icon={<MenuOutlined />} type="text" />
+          <Dropdown
+            menu={{
+              items: menuList,
+              onClick: ({ key }: { key: number | string }) => {
+                navigate(key as string, {
+                  replace: true,
+                });
+              },
+            }}
+          >
+            <Button icon={<MenuOutlined />} type="text" />
+          </Dropdown>
         </Col>
         <Col className="header-left" xs={0} sm={0} md={12} lg={12} xl={12} xxl={12}>
           {/* <span className="iconfont icon-a-adminguanliyuanguanlizheyonghukehu"></span> */}
