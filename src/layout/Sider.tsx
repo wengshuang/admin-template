@@ -1,6 +1,7 @@
-import { Layout, Menu } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
+import { Layout, Menu } from 'antd';
 
 import routes, { RouteType } from '@/routes/config';
 import { UserInfoState, useUserInfo } from '@/store';

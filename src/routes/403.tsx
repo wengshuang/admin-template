@@ -1,5 +1,6 @@
-import { Result } from 'antd';
 import React from 'react';
+
+import { Result } from 'antd';
 
 const App: React.FC = () => <Result status="403" title="403" />;
 

@@ -1,5 +1,6 @@
-import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
+
+import { Layout } from 'antd';
 
 export default function CustomContent() {
   return (

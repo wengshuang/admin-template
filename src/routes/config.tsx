@@ -1,7 +1,7 @@
-import { Spin } from 'antd';
 import { lazy, ReactNode, Suspense } from 'react';
 
 import { FileTextOutlined, FormOutlined, HomeOutlined, TableOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
 
 const Home = lazy(() => import('@/pages/Home/index.tsx'));
 const List = lazy(() => import('@/pages/List/index.tsx'));

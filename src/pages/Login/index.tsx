@@ -1,6 +1,7 @@
-import { Button, Form, Input } from 'antd';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { Button, Form, Input } from 'antd';
 
 import { UserInfoState, useUserInfo } from '@/store';
 

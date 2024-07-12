@@ -4,7 +4,7 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^@components/(.*)$", "^@(.*)", "^[./]"],
+  "importOrder": ["^react(.*)", "antd/(.*)", "<THIRD_PARTY_MODULES>", "@/(.*)", "^[./]"],
   "singleQuote": true,
   "trailingComma": "all",
   "printWidth": 100,

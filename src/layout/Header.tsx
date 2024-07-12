@@ -1,10 +1,11 @@
-import { Button, Col, Dropdown, Layout, Row } from 'antd';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { MenuOutlined } from '@ant-design/icons';
+import { Button, Col, Dropdown, Layout, Row } from 'antd';
+
 import routes from '@/routes/config';
 import { UserInfoState, useUserInfo } from '@/store';
-import { MenuOutlined } from '@ant-design/icons';
 
 import styles from './index.module.less';
 import { resetRoute } from './Sider';

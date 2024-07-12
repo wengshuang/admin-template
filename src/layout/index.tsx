@@ -1,6 +1,7 @@
-import { Layout } from 'antd';
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+
+import { Layout } from 'antd';
 
 import { UserInfoState, useUserInfo } from '@/store';
 

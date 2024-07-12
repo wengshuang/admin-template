@@ -1,7 +1,8 @@
-import { Badge, Descriptions } from 'antd';
-import type { DescriptionsProps } from 'antd';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+
+import { Badge, Descriptions } from 'antd';
+import type { DescriptionsProps } from 'antd';
 
 const items: DescriptionsProps['items'] = [
   {
