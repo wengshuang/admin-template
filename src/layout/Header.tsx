@@ -41,6 +41,7 @@ export default function CustomHeader() {
       <Row>
         <Col xs={2} sm={0} md={0} lg={0} xl={0} xxl={0}>
           <Dropdown
+            trigger={['click', 'hover']}
             menu={{
               items: menuList,
               onClick: ({ key }: { key: number | string }) => {
@@ -58,7 +59,7 @@ export default function CustomHeader() {
           <span className="title">react-admin-template</span>
         </Col>
         <Col className="header-right" xs={22} sm={24} md={12} lg={12} xl={12} xxl={12}>
-          <Dropdown menu={{ items, onClick }}>
+          <Dropdown menu={{ items, onClick }} trigger={['click', 'hover']}>
             <span className="username">欢迎，{userInfo.name}</span>
           </Dropdown>
         </Col>
